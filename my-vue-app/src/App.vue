@@ -1,31 +1,29 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-    <MyComp/>
+  <div class="app">
+    <TopArea />
+    <MainArea />
+    <InfoArea />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import MyComp from './components/mycomp'
+import TopArea from "./components/TopComp";
+import MainArea from "./components/MainComp";
+import InfoArea from "./components/InfoComp";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld,
-    MyComp
-  }
-}
+    TopArea,
+    MainArea,
+    InfoArea
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app {
+  width: 500px;
+  margin: 0 auto;
 }
 </style>
