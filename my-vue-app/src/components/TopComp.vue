@@ -1,17 +1,21 @@
 <template>
   <header>
     <ul class="gnb">
-      <li v-on:click="chgImg(0)">
+      <li v-on:click="chgImg('서울')">
         <a href="#">서울</a>
       </li>
-      <li v-on:click="chgImg(1)">
+      <li v-on:click="chgImg('부산')">
         <a href="#">부산</a>
+      </li>
+      <li v-on:click="chgImg('제주')">
+        <a href="#">제주</a>
       </li>
     </ul>
   </header>
 </template>
 
 <script>
+import $ from "jquery";
 export default {
   name: "TopArea",
   data() {
@@ -19,9 +23,17 @@ export default {
   },
   methods: {
     chgImg(n) {
-      console.log(n, store.state.isrc[n]);
-      store.state.imgsrc = store.state.isrc[n];
+      console.log(n, store.state.cityData[n].이미지);
+      store.state.imgsrc = store.state.cityData[n].이미지;
+      store.state.desc = store.state.cityData[n].설명;
     }
+  },
+  mounted() {
+    $("a").mouseover(function() {
+      console.log(3333);
+      $(this).addClass("on").parent().siblings().find("a").removeClass("on")
+
+    });
   }
 };
 </script>

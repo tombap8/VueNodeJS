@@ -10,7 +10,6 @@
 import TopArea from "./components/TopComp";
 import MainArea from "./components/MainComp";
 import InfoArea from "./components/InfoComp";
-
 export default {
   name: "App",
   components: {
