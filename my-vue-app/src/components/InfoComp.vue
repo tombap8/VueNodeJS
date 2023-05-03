@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import store from './store';
 export default {
   name: "InfoArea",
   data() {

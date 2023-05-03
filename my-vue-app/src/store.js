@@ -1,4 +1,6 @@
+import Vue from 'vue'
 import Vuex from 'vuex'
+import 'babel-polyfill'
 
 
 const store = new Vuex.Store({

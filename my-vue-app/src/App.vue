@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div id="app">
     <TopArea />
     <MainArea />
     <InfoArea />
@@ -18,11 +18,14 @@ export default {
     MainArea,
     InfoArea
   },
+  created(){
+    // console.log(store.state.imgsrc);
+  }
 };
 </script>
 
 <style>
-.app {
+#app {
   width: 500px;
   margin: 0 auto;
 }
