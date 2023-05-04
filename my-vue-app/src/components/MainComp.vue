@@ -1,7 +1,7 @@
 <template>
   <main>
-    <img v-bind:src="$store.state.imgsrc" alt="이미지" />
-    <p v-text="$store.state.desc"></p>
+    <img v-bind:src="store.state.imgsrc" alt="이미지" />
+    <p v-text="store.state.desc"></p>
   </main>
 </template>
 
