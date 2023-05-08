@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
-import 'babel-polyfill'
+// import Vuex from 'vuex'
+// import 'babel-polyfill'
 import App from './App'
 import store from './store.js'
 
