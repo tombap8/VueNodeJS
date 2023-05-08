@@ -33,24 +33,16 @@ export default {
   methods: {
     chgMenu(n){
       console.log(n);
-      this.$store.state.cityData = 
-      n==1?
-      {...this.$store.state.myD0,...this.$store.state.myD1}:
-      {...this.$store.state.myD0,...this.$store.state.myD2};
-      n==1?this.num =2:this.num=1;
-
-      console.log(this.$store.state.cityData);
-
-      this.$store.state.imgsrc = this.$store.state.cityData.인트로.이미지;
-      this.$store.state.desc = this.$store.state.cityData.인트로.설명;
+      this.$store.commit('chgMenu',n);
+      n===1? this.num=2:this.num=1;
 
       $(".gnb a").removeClass("on");
       this.setLink();
     },
     chgImg(n) {
-      console.log(n, this.$store.state.cityData[n].이미지);
-      this.$store.state.imgsrc = this.$store.state.cityData[n].이미지;
-      this.$store.state.desc = this.$store.state.cityData[n].설명;
+      console.log(n);
+      this.$store.commit('chgImg',n);
+      
     },
     setLink(){
        $(".gnb a").click(function(e) {

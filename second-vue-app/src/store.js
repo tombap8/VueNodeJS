@@ -19,13 +19,29 @@ Vue.use(Vuex)
         myD0 : myD0,
         myD1 : myD1,
         myD2 : myD2,
+        num : 1,
     },
     mutations:{
         initSet(헐){// 하나의 전달값 - 자신의 state
             console.log(333);
             헐.imgsrc = 헐.cityData.인트로.이미지;
             헐.desc = 헐.cityData.인트로.설명;
-        }
+        },
+        chgMenu(헐,슉){
+            헐.cityData = 
+            슉==1?
+            {...헐.myD0,...헐.myD1}:
+            {...헐.myD0,...헐.myD2};
+
+            console.log(헐.cityData);
+
+            헐.imgsrc = 헐.cityData.인트로.이미지;
+            헐.desc = 헐.cityData.인트로.설명;
+        },
+        chgImg(헐,슉) {
+            헐.imgsrc = 헐.cityData[슉].이미지;
+            헐.desc = 헐.cityData[슉].설명;
+          },
     }
 })
 
